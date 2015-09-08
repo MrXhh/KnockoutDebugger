@@ -1,0 +1,20 @@
+{
+	"name" : "Knockout Debug",
+	"description" : "Some help during Knockout development",
+	"version" : "0.1",
+	"permissions" : [
+		"contextMenus"
+	],
+	"content_scripts" : [{
+			"matches" : ["https://*.simcorp.com/*", "https://*.scdom.net/*", "https://localhost/*"],
+			"js" : ["js/jquery.js", "js/knockout.js", "js/content.js"]
+		}
+	],
+	"background" : {
+		"scripts" : [
+			"js/background.js"
+		]
+	},
+	"web_accessible_resources" : ["js/inject.js"],
+	"manifest_version" : 2
+}
